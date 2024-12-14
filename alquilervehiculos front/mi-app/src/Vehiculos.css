@@ -1,0 +1,140 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: calc(100vh - 80px);
+  margin-top: 20px;
+  padding-top: 100px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.vehicle-type {
+  width: 200px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.vehicle-type h3 {
+  font-size: 1.2rem;
+  color: #312d81;
+  margin-bottom: 10px;
+}
+
+.vehicle-type ul {
+  list-style: none;
+  padding: 0;
+}
+
+.vehicle-type li {
+  padding: 8px 0;
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.vehicle-type li:hover {
+  color: #312d81;
+}
+
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-price-container {
+  background-color: #312d81;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  padding: 8px 16px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-price {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-img {
+  max-width: 100%;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 8px;
+  margin-top: 30%;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-details span {
+  margin: 4px 0;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.vehicle-type li.selected {
+  color: #312d81;
+  font-weight: bold;
+}
